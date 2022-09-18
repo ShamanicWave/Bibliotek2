@@ -32,6 +32,7 @@ public class Book {
         this.status = status;
 
     }
+
     public String getTitle() {
         return title;
     }

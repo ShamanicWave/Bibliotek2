@@ -10,15 +10,18 @@ public class Main {
         Bibliotek Bibblan = new Bibliotek("Bibblan", 0);
 
         Book b1 = new Book("Alfons", "Anna", "44", "55", true);
-        Book b2 = new Book("Goldface", "Per", "86", "120", false);
+        Book b2 = new Book("Goldface", "Per", "86", "500", false);
+        Book b3 = new Book("Jungel", "Tore", "23", "102", false);
+        Book b4 = new Book("Sand", "Skog", "200", "12", false);
+
 
 
 
         ArrayList<Book> Books = new ArrayList<>();
         Books.add(b1);
         Books.add(b2);
-        //Books.add(p3);
-        //Books.add(p4);
+        Books.add(b3);
+        Books.add(b4);
 
 
 
@@ -80,11 +83,34 @@ public class Main {
                 }
 
             } else if (val.equals("4")) {
+                System.out.println("What book do you want to return?");
+                String bookReturn = input.nextLine();
+
+                for (Book book : Books) {
+                    if (book.getTitle().equals(bookReturn)){
+                        Books.add(book);
+
+                        System.out.println("Boken är inne: " + Books);
+                    }
+                    else {
+                        System.out.println("Boken finns redan");
+                    }
+
+
+
+                }
+
+
 
             } else if (val.equals("5")) {
+                System.out.println("Press n to close the program");
+
+
+
+
 
             }
-        System.out.println("Press j to go back.");
+        System.out.println("Press j to go back or n to quit.");
             again = input.nextLine();
 
 
