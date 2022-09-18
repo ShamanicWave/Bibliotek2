@@ -7,6 +7,21 @@ public class Main {
         String again;
 
 
+        Bibliotek Bibblan = new Bibliotek("Bibblan", 0);
+
+        Book b1 = new Book("Alfons", "Anna", "44", "55", true);
+        Book b2 = new Book("Goldface", "Per", "86", "120", false);
+
+
+
+        ArrayList<Book> Books = new ArrayList<>();
+        Books.add(b1);
+        Books.add(b2);
+        //Books.add(p3);
+        //Books.add(p4);
+
+
+
         do {
 
 
@@ -23,25 +38,41 @@ public class Main {
 
             if (val.equals("1")) {
                 System.out.println("What book would you like to add?");
+                String title = input.nextLine();
+                System.out.println("authour?");
+                String authour = input.nextLine();
+                System.out.println("Year?");
+                String year = input.nextLine();
+                System.out.println("edition?");
+                String edition = input.nextLine();
+
+                Book newBook = new Book(title, authour, year, edition, true);
+                Books.add(newBook);
+
+                System.out.println("The book is in the system now: " + Books);
+
 
 
             } else if (val.equals("2")) {
                 System.out.println("What book are you looking for?");
+                String bookSearch = input.nextLine();
+                for (Book book : Books)  {
+                    if (book.getTitle().equals(bookSearch)) {
+
+                        System.out.println("Den boken finns!: ");
+
+
+                    }
+                    else {
+                        System.out.println("Den boken finns inte.");
+                    }
+
+                }
 
 
             } else if (val.equals("3")) {
-                Bibliotek Bibblan = new Bibliotek("Bibblan", 0);
-
-                Book Alfons = new Book("Alfons ", "Anna ", 44, 55, true);
-                Book Goldface = new Book("Goldface ", "Per ", 86, 120, false);
 
 
-                ArrayList<Book> Books = new ArrayList<>();
-
-                Books.add(Alfons);
-                Books.add(Goldface);
-                //Books.add(p3);
-                //Books.add(p4);
 
                 for (Book Book : Books) {
                     System.out.println(Book);
@@ -61,8 +92,8 @@ public class Main {
 
         //Bibliotek Bibblan = new Bibliotek("Bibblan", 0 );
 
-        Book Alfons = new Book("Alfons ", "Anna ", 44, 55, true);
-        Book Goldface = new Book("Goldface ", "Per ", 86, 120, false);
+        //Book b1 = new Book("Alfons ", "Anna ", "46", "55", true);
+        //Book b2 = new Book("Goldface ", "Per ", "86", "120", false);
 
         //Book p3 = p1;
 
@@ -82,7 +113,7 @@ public class Main {
 
 
 
-            ArrayList<Book> Books = new ArrayList<>();
+           // ArrayList<Book> Books = new ArrayList<>();
 
             //Books.add(Alfons);
             //Books.add(Goldface);

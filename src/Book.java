@@ -1,37 +1,49 @@
-public class Book {               // Klass är en mall av ett objekt
+public class Book {
 
-    String name;                    // Instansvariabler
-    String forfattare;
-    int ar;
-    int upplaga;
+
+
+
+    // Klass är en mall av ett objekt
+
+    String title;                    // Instansvariabler
+    String authour;
+    String year;
+    String edition;
     boolean status;
 
 
-    public Book()  {
-        this.name = "--";
-        this.forfattare = "--";
-        this.ar = 0;
-        this.upplaga = 0;
+
+
+
+
+    public Book(String title)  {
+        this.title = "--";
+        this.authour = "--";
+        this.year = "--";
+        this.edition = "--";
         this.status = true;
     }
 
-    public Book(String name, String forfattare, int ar, int upplaga, boolean status ) {   // Konstruktör
-        this.name = name;
-        this.forfattare = forfattare;
-        this.ar = ar;
-        this.upplaga = upplaga;
+    public Book(String title, String authour, String year, String edition, boolean status ) {   // Konstruktör
+        this.title = title;
+        this.authour = authour;
+        this.year = year;
+        this.edition = edition;
         this.status = status;
 
     }
+    public String getTitle() {
+        return title;
+    }
 
     public void greet() {   //Metoder
-        System.out.println("Hej jag heter " + this.name);
+        System.out.println("Hej jag heter " + this.title);
     }
 
     public String toString() {
-        return "Name: " + this.name +
-                " Författare: " + this.forfattare +
-                " År " + this.ar + "Upplaga " + this.upplaga + "Status " + this.status;
+        return "Name: " + this.title +
+                " Författare: " + this.authour +
+                " År " + this.year + "Upplaga " + this.edition + "Status " + this.status;
     }
 
 
